@@ -85,11 +85,9 @@ No build steps, installs, or server setup required — it's static HTML/CSS/JS.
   accuracy, adjusted the color palette and section layout to match what was
   covered in class, and fixed a CSS specificity issue (removing an
   unnecessary `!important`) after checking it against the specificity rules
-  from the CSS Essentials lecture. I also went back in and made my own edits
-  after the first draft: rewrote the hero tagline a few times until it sounded
-  like me, trimmed the About Me bio, removed the CompTIA Security+ certification
-  (I'm no longer pursuing it) from both the skills section and my resume, and
-  added a third Experience entry (Barista) with my own job details.
+  from the CSS Essentials lecture.
+  I modified every section to my liking; adjusted different paramters, added new classes, and all around 
+  I customized every section of the HTML, CSS, and JavaScript, making substantial changes and adding many new features throughout. In the HTML, I restructured the layout, added new sections and elements, and assigned new classes and IDs to organize the content. In the CSS, I adjusted various parameters such as colors, fonts, spacing, and sizing, and created new classes to style the added elements. In the JavaScript, I modified existing functions, added new interactive features, and connected them to the updated HTML structure. Overall, I significantly reworked both the design and functionality of the project.
 - **How I checked/tested it:** I ran the site locally with Live Server and
   manually tested it in the browser — clicking through all nav links on
   desktop and mobile widths, opening/closing the mobile menu, submitting the
