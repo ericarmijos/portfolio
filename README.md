@@ -85,7 +85,11 @@ No build steps, installs, or server setup required — it's static HTML/CSS/JS.
   accuracy, adjusted the color palette and section layout to match what was
   covered in class, and fixed a CSS specificity issue (removing an
   unnecessary `!important`) after checking it against the specificity rules
-  from the CSS Essentials lecture.
+  from the CSS Essentials lecture. I also went back in and made my own edits
+  after the first draft: rewrote the hero tagline a few times until it sounded
+  like me, trimmed the About Me bio, removed the CompTIA Security+ certification
+  (I'm no longer pursuing it) from both the skills section and my resume, and
+  added a third Experience entry (Barista) with my own job details.
 - **How I checked/tested it:** I ran the site locally with Live Server and
   manually tested it in the browser — clicking through all nav links on
   desktop and mobile widths, opening/closing the mobile menu, submitting the
