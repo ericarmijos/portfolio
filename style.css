@@ -108,11 +108,23 @@ img {
    Hero
    ------------------------------------------------------------------------- */
 .hero {
-    /* Gradient instead of a photo so the page has no outside image dependency */
     background-image: linear-gradient(135deg, #17324d, #2c4d73);
     color: white;
     padding: 90px 6%;
     text-align: center;
+}
+
+/* Circular profile photo, cropped to a square with object-fit so any
+   source image is centered correctly regardless of its original shape */
+.hero-photo {
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    margin: 0 auto 24px auto;
 }
 
 .hero h1 {
