@@ -25,8 +25,7 @@ no frameworks, libraries, or page builders.
 
 ## Deployed Website Link
 
-🔧 **TODO:** add your live URL here once it's deployed, e.g.
-`https://ericarmijos.github.io/portfolio/`
+[https://ericarmijos.github.io/portfolio/](https://ericarmijos.github.io/portfolio/)
 
 ## How to Run the Website Locally
 
