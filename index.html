@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Eric Armijos Calle, a Computer Science student at Muhlenberg College.">
+    <meta name="author" content="Eric Armijos Calle">
+    <title>Eric Armijos Calle | Portfolio</title>
+
+    <!-- External stylesheet, shared by all 3 pages -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <!-- Using Flexbox to space the logo and nav links apart (see .navbar in style.css) -->
+        <nav class="navbar">
+            <a href="index.html" class="logo">Eric Armijos Calle</a>
+
+            <!-- Hamburger button only appears on small screens; main.js toggles the menu -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Eric Armijos Calle</h1>
+            <p class="tagline">Computer Science Student @ Muhlenberg College</p>
+            <p class="hero-text">
+                Full-stack developer in training, varsity soccer athlete, and builder of practical
+                tools like CarLog. I like turning everyday problems into working software.
+            </p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">View My Projects</a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="section" id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm a Computer Science major at Muhlenberg College (Class of 2027) with a background
+                that mixes software, hands-on construction work, and Division III athletics. I'm
+                currently working through coursework in Data Structures & Algorithms, Software
+                Engineering, and Web Software Development, and I'm especially interested in
+                full-stack development &mdash; building apps where the front end, back end, and
+                database all fit together cleanly.
+            </p>
+            <p>
+                Outside the classroom, I play varsity men's soccer, which means learning to manage
+                20+ hours a week of training and travel alongside a full course load. That balance
+                has taught me a lot about time management and working efficiently under a deadline
+                &mdash; skills that carry directly into how I approach a project like this one. I'm
+                also fluent in English and Spanish, and I'm currently working toward a CompTIA
+                Security+ certification.
+            </p>
+        </section>
+
+        <section class="section" id="education">
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <div class="education-text">
+                    <h3>Muhlenberg College <span class="edu-date">2024 &ndash; Present</span></h3>
+                    <p class="edu-subtitle">B.S. in Computer Science, GPA 3.2/4.0 &mdash; Expected May 2027</p>
+                    <ul>
+                        <li>Dean's List | Varsity Men's Soccer Team</li>
+                        <li>Coursework: Data Structures &amp; Algorithms, Software Engineering, Discrete Mathematics, Statistical Analysis</li>
+                        <li>Current: Operating Systems, Machine Learning, Web Software Development</li>
+                    </ul>
+                </div>
+                <!-- Real image with descriptive alt text, not just decoration -->
+                <img
+                    src="https://lvaic.org/wp-content/uploads/2016/08/logo-muhlenberg.png"
+                    alt="Muhlenberg College logo"
+                    class="education-logo"
+                    width="140"
+                >
+            </div>
+
+            <div class="education-item">
+                <div class="education-text">
+                    <h3>University of Massachusetts Lowell <span class="edu-date">2023 &ndash; 2024</span></h3>
+                    <p class="edu-subtitle">Dean's List (both semesters) &middot; Varsity Men's Soccer</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <h2>Skills &amp; Interests</h2>
+            <!-- Flexbox with flex-wrap so the cards reflow instead of overflowing on small screens -->
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Dart</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools &amp; Technologies</h3>
+                    <ul>
+                        <li>Git / GitHub</li>
+                        <li>Flask</li>
+                        <li>Flutter</li>
+                        <li>SQLite</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Certification</h3>
+                    <ul>
+                        <li>CompTIA Security+ (Expected Oct 2026)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>English (Fluent)</li>
+                        <li>Spanish (Fluent)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <div>
+                    <h3>Property Management &amp; Construction Assistant <span class="edu-date">2024 &ndash; 2026</span></h3>
+                    <p class="edu-subtitle">Family Business, East Hampton, NY</p>
+                    <ul>
+                        <li>Supported residential property management, renovations, framing, and repairs, coordinating contractors and vendors across active job sites.</li>
+                        <li>Tracked materials, schedules, invoices, and expenses; prepared pricing estimates and handled client and vendor communication.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div>
+                    <h3>Restaurant Server <span class="edu-date">Summer 2026</span></h3>
+                    <p class="edu-subtitle">Local Restaurant, East Hampton, NY</p>
+                    <ul>
+                        <li>Managed orders, payments, and guest needs in a fast-paced, high-volume environment.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="leadership">
+            <h2>Leadership &amp; Honors</h2>
+            <div class="experience-item">
+                <div>
+                    <h3>NCAA Men's Soccer <span class="edu-date">2023 &ndash; Present</span></h3>
+                    <p class="edu-subtitle">Muhlenberg College &amp; UMass Lowell</p>
+                    <ul>
+                        <li>Varsity athlete, 20+ hrs/week in-season alongside full-time Computer Science coursework.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Eric Armijos Calle. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://github.com/ericarmijos" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/ericarmijos" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:ericarmijos1@gmail.com">Email</a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+    </footer>
+
+</body>
+</html>

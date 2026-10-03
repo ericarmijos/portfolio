@@ -1,0 +1,468 @@
+/* =========================================================================
+   Eric Armijos Calle — Personal Portfolio
+   Shared external stylesheet for index.html, projects.html, and contact.html
+   ========================================================================= */
+
+/* CSS Reset: clear default browser spacing and use border-box so that
+   padding and border are included in an element's width (Box Model) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: #8b1e3f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #17324d;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* -------------------------------------------------------------------------
+   Navbar
+   ------------------------------------------------------------------------- */
+/* Using Flexbox to push the logo to one side and links to the other */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #17324d;
+    padding: 16px 6%;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+.nav-links a:hover {
+    color: #d8c3cb;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Hamburger button: hidden by default, only shown on small screens */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+/* -------------------------------------------------------------------------
+   Hero
+   ------------------------------------------------------------------------- */
+.hero {
+    /* Gradient instead of a photo so the page has no outside image dependency */
+    background-image: linear-gradient(135deg, #17324d, #2c4d73);
+    color: white;
+    padding: 90px 6%;
+    text-align: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* Smaller hero used on inner pages (Projects, Contact) so the big
+   introduction banner is reserved for the homepage */
+.hero-page {
+    padding: 60px 6%;
+}
+
+.hero-page .hero-text {
+    margin-bottom: 10px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #8b1e3f;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #6f1832;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #17324d;
+}
+
+.btn-secondary:hover {
+    background-color: #e6e6e6;
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------
+   Page sections (About, Education, Skills, Experience, Leadership)
+   ------------------------------------------------------------------------- */
+.section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 6%;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    border-left: 4px solid #8b1e3f;
+    padding-left: 12px;
+}
+
+.section p {
+    margin-bottom: 14px;
+}
+
+.education-item,
+.experience-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.education-item h3,
+.experience-item h3 {
+    font-size: 20px;
+}
+
+.edu-date {
+    font-weight: normal;
+    color: #555555;
+    font-size: 15px;
+}
+
+.edu-subtitle {
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.education-item ul,
+.experience-item ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.education-logo {
+    flex-shrink: 0;
+}
+
+/* -------------------------------------------------------------------------
+   Skills grid
+   ------------------------------------------------------------------------- */
+/* flex-wrap lets the cards drop to the next line instead of shrinking forever */
+.skills-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #f5f5f5;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    padding: 20px;
+    flex: 1 1 200px;
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.skill-card ul {
+    list-style: disc;
+    margin-left: 18px;
+}
+
+/* -------------------------------------------------------------------------
+   Project cards (projects.html)
+   ------------------------------------------------------------------------- */
+/* Icon on the left, details on the right, using the same row-based Flexbox
+   pattern as .education-item */
+.project-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    background-color: #f5f5f5;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 30px;
+}
+
+.project-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background-color: #17324d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.project-meta {
+    font-style: italic;
+    color: #555555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    margin-bottom: 10px;
+}
+
+.project-content ul {
+    list-style: disc;
+    margin: 0 0 14px 20px;
+}
+
+/* Small rounded labels for each technology used */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.tech-tag {
+    background-color: #17324d;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.project-links a {
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------
+   Contact form (contact.html)
+   ------------------------------------------------------------------------- */
+.contact-list li {
+    margin-bottom: 10px;
+}
+
+#contact-form {
+    max-width: 500px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #17324d;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #17324d;
+}
+
+/* Added by main.js when a field fails validation.
+   Matches the specificity of the :focus rule above (instead of reaching for
+   !important) so an invalid field still shows red even while focused. */
+.form-group input.input-error,
+.form-group textarea.input-error {
+    border-color: #b3261e;
+}
+
+.error-message {
+    color: #b3261e;
+    font-size: 13px;
+    min-height: 16px;
+}
+
+.form-success {
+    color: #1e7a34;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+#contact-form button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* -------------------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------------------- */
+.site-footer {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 30px 6%;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+}
+
+/* -------------------------------------------------------------------------
+   Responsive design
+   ------------------------------------------------------------------------- */
+@media (max-width: 700px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #17324d;
+        padding: 16px 6%;
+        gap: 16px;
+        z-index: 10;
+    }
+
+    /* main.js toggles this class on click to show/hide the mobile menu */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-item,
+    .experience-item,
+    .project-card {
+        flex-direction: column;
+    }
+}
